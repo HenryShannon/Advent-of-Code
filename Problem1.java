@@ -14,4 +14,18 @@ public class Problem1 {
     }
     return floor;
   }
+
+  public static int whenBasement(String str) {
+    int step = 0;
+    int floor = 0;
+    while (floor >= 0) {
+      if (str.charAt(step) == '(') {
+        floor++;
+      } else if (str.charAt(step) == ')') {
+        floor--;
+      }
+      step++;
+    }
+    return step;
+  }
 }
